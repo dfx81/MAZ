@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MAZ</title>
+  
+  <!-- HTML -->
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img onclick='show("list")' src="images/back.png" alt="back"></img>
+      <p id="page-name">Stock</p>
+      <img onclick='show("cat")' src="images/search.png" alt="search"></img>
+    </div>
+    <div id="list" class="content shown">
+      There's no item here...
+    </div>
+    <div id="cat" class="content">
+      <div class="col">
+        <button onclick='show("shelf")' class="cat-btn">Exhaust</button>
+        <button onclick='show("shelf")' class="cat-btn">Brakes</button>
+        <button onclick='show("shelf")' class="cat-btn">Mirrors</button>
+        <button onclick='show("shelf")' class="cat-btn">Leather</button>
+      </div>
+      <div class="col">
+        <button onclick='show("shelf")' class="cat-btn">Engines</button>
+        <button onclick='show("shelf")' class="cat-btn">Lamps</button>
+        <button onclick='show("shelf")' class="cat-btn">Tires</button>
+        <button onclick='show("shelf")' class="cat-btn">Rims</button>
+      </div>
+    </div>
+    <div id="shelf" class="content">
+      Item isn't available in any shelf...
+    </div>
+    <div id="add" class="content">
+      <p>Item Name</p>
+      <input required id="add-name" type="text"></input>
+      <p>Item Serial ID</p>
+      <input required id="add-id" type="text"></input>
+      <p>Item Quantity</p>
+      <input required id="add-qtty" type="number"></input>
+      <p>Item Information</p>
+      <input id="add-info" type="text"></input>
+      <p>Item Location</p>
+      <select id="add-shelf">
+        <option value="1">Shelf 1</option>
+        <option value="2">Shelf 2</option>
+      </select>
+      <p>Item Category</p>
+      <select id="add-cat">
+        <option value="Exhaust">Exhaust</option>
+        <option value="Engines">Engines</option>
+        <option value="Brakes">Brakes</option>
+        <option value="Mirror">Mirrors</option>
+        <option value="Lamps">Lamps</option>
+        <option value="Tires">Tires</option>
+        <option value="Leather">Leather</option>
+        <option value="Rims">Rims</option>
+      </select>
+      <button onclick="add()" class="add-item-btn">ADD</button>
+    </div>
+    <div id="edit" class="content">
+      <p>Item Name</p>
+      <input required id="edit-name" type="text"></input>
+      <p>Item Information</p>
+      <input id="edit-info" type="text"></input>
+      <p>Item Location</p>
+      <select id="edit-shelf">
+        <option value="1">Shelf 1</option>
+        <option value="2">Shelf 2</option>
+      </select>
+      <button onclick="edit()" class="edit-item-btn">EDIT</button>
+    </div>
+    <div id="noti" class="content">
+      There's no notifications...
+    </div>
+    <div id="cart" class="content">
+      There's no item in the cart...
+    </div>
+    <div id="detail" class="content">
+      <div class="top">
+        <img id="det-img" src="images/search.png"></img>
+        <div class="top-desc">
+          <p id="det-name">Item Name</p>
+          <small id="det-shelf">Shelf no</small>
+          <small id="det-qtty">n parts left</small>
+        </div>
+      </div>
+      <button disabled="true" id="det-rs-btn" class="det-btn">Restock</button>
+      <h3>Details</h3>
+      <p id="det-desc">
+        Item description
+      </p>
+    </div>
+    <div id="take" class="content">
+      <img id="take-img" src="images/search.png"></img>
+      <p id="take-det">
+        Name:<br/>
+        ID:<br/>
+        Stock:
+      </p>
+      <p style="align-self: center">How many items you want to take?</p>
+      <input required id="take-qtty" type="number"></input>
+      <button class="take-btn">ADD</button>
+    </div>
+    <div class="footer">
+      <div id="list-btn" onclick='show("list")' class="nav-item">
+        <img src="images/list.png"></img>
+        <small>Items</small>
+      </div>
+      <div id="add-new-btn" onclick='show("add")' class="nav-item">
+        <img src="images/plus.png"></img>
+        <small>Add</small>
+      </div>
+      <div id="noti-btn" onclick="loadNoti()" class="nav-item">
+        <img src="images/noti.png"></img>
+        <small>Notifications</small>
+      </div>
+      <div class="nav-item">
+        <img id="logo" src="images/logo.png"></img>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
