@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-size: 15pt;
+  background-color: #dfdfdf;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: none;
+  margin: 0px 32px;
+  overflow: auto;
+  max-height: 80%;
+  height: 80%;
+}
+
+.shown {
+  display: flex;
+}
+
+.header, .footer {
+  height: 10%;
+  max-height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20pt;
+}
+
+.header {
+  border-bottom: 2px solid black;
+  margin: 0px 32px;
+}
+
+.footer {
+  border-top: 2px solid black;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer small {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 1.5rem;
+}
+
+#list {
+  flex-direction: column;
+}
+
+#cat {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-btn {
+  font-size: 16px;
+  width: 95%;
+  margin: 4px;
+  padding: 16px;
+}
+
+.list-item, .noti-item {
+  margin: 2px 0px;
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.item-img, .cart-img {
+  margin: 0px 8px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 10%;
+}
+
+.overview, .cart-desc {
+  width: 80%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-controls {
+  display: none;
+  width: 30%;
+  max-width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ctrl-btn {
+  display: none;
+  margin: 4px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#add, #edit {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-item-btn, .edit-item-btn {
+  align-self: center;
+  margin: 16px;
+  padding: 8px;
+  width: 20%;
+}
+
+select {
+  color: white;
+  background-color: green;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.oflow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#detail {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 8px 0px;
+}
+
+.top-desc {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.det-btn {
+  width: 50%;
+  padding: 8px;
+  margin: 8px;
+  align-self: center;
+}
+
+#det-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 30%;
+  margin: 16px 32px 0px 0px;
+}
+
+#take {
+  flex-direction: column;
+}
+
+#shelf {
+  flex-direction: column;
+}
+
+.result-item {
+  margin: 2px 0px;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+#take-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 50%;
+  margin: 32px;
+  align-self: center;
+}
+
+#take p {
+  margin: 16px 0px;
+  margin-bottom: 8px;
+}
+
+#take input {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  width: 75%;
+  padding: 8px;
+  align-self: center;
+}
+
+.take-btn {
+  margin: 16px 0px;
+  background-color: green;
+  border: none;
+  padding: 16px;
+  width: 50%;
+  align-self: center;
+}
+
+#noti {
+  flex-flow: column;
+}
+
+#noti div {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0px;
+  padding: 8px;
+}
+
+#noti div img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 10%;
+}
+
+button {
+  color: white;
+  border: none;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.noti-item {
+  padding: 8px;
+}
+
+.noti-item img, .noti-item p {
+  margin: 8px 4px;
+}
+
+input {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+button:disabled {
+  background-color: #0000030;
+}
+
+#btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#cart {
+  flex-direction: column;
+  padding: 8px 0px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.cancel-btn {
+  width: 20%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#cart div {
+  font-size: 12px;
+}
+
+.clear-cart {
+  padding: 8px;
+  margin: 8px 0px;
+}
