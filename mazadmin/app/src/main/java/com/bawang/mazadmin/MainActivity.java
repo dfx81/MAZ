@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setting.setLoadWithOverviewMode(true);
         setting.setUseWideViewPort(true);
         setting.setDomStorageEnabled(true);
+        disp.setWebChromeClient(new WebChromeClient());
 
         disp.loadUrl("file:///android_asset/index.html");
     }
